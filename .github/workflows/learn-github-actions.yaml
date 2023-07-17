@@ -10,5 +10,4 @@ jobs:
       with:
         node-version: 18
     - run: npm init -y
-    - run: npm ci
     - run: npm test
