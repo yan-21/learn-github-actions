@@ -5,4 +5,11 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-    - run: npm install -g bats
+    - shell: bash
+      run: |
+        expr 1 + 1 > output.log
+    - name: Upload output file
+      uses: actions/upload-artifact@v3
+      with:
+        name: output-log-file
+        path: output.log
