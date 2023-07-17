@@ -3,6 +3,6 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   example-job:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - run: npm install -g bats
