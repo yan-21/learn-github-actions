@@ -2,12 +2,6 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  setup-nodejs-env:
-    runs-on: ubuntu-latest
+  example-job:
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - run: npm init -y
-    - run: npm test
+    - run: npm install -g bats
